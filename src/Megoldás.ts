@@ -48,11 +48,18 @@ export default class Megoldás {
         for (const [key, value] of statMap) {
             if (value === max.maxFelszálló) {
                 max.maxElsőMegálló = key;
+                break;
             }
         }
         return max;
     }
 
+public get ingyenesenUtazók(): number{
+    return this._utasadatok.filter(x => x.ingyenesUtazás).length;
+}
+public get kedvezményesenUtazók(): number{
+    return this._utasadatok.filter(x => x.kedvezményesUtazás).length;
+}
     constructor(forrás: string) {
         fs.readFileSync(forrás)
             .toString()

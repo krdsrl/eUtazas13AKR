@@ -31,9 +31,15 @@ export default class Content {
 
         // 3. feladat:
         res.write(`3. feladat\nA buszra ${megold.érvénytelenFelszállás} utas nem szállhatott fel.\n`);
-        
+
         // 4. feladat:
-        res.write(`4. feladat\nA legtöbb utas (${megold.maxKeresArray.maxFelszálló} fő) a ${megold.maxKeresArray.maxElsőMegálló} megállóban próbált felszállni.\n`); 
+        //arrayyel
+        res.write(`4. feladat\nA legtöbb utas (${megold.maxKeresArray.maxFelszálló} fő) a ${megold.maxKeresArray.maxElsőMegálló} megállóban próbált felszállni.\n`);
+        //mappel
+        res.write(`4. feladat\nA legtöbb utas (${megold.maxKeresMap.maxFelszálló} fő) a ${megold.maxKeresMap.maxElsőMegálló} megállóban próbált felszállni.\n`);
+//5. feldat
+res.write(`5.feladat\nIngyenesen utazók száma: ${megold.ingyenesenUtazók} fő\nA kedvezményesen utazók száma: ${megold.kedvezményesenUtazók} fő`);
+
 
         // <---- Fejezd be a kódolást
 
